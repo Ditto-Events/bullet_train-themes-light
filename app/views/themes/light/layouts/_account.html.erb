@@ -30,6 +30,10 @@
           </div>
 
           <nav class="flex-1 space-y-1 overflow-y-auto select-none">
+            <div class="px-5 py-4 menu">
+              <%= render 'account/shared/menu' %>
+            </div>
+
             <div class="flex-shrink-0 flex shadow px-5 py-4">
               <div class="flex-shrink-0 w-full group block no-underline">
                 <div class="flex items-center">
@@ -46,10 +50,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div class="px-5 py-4 menu">
-              <%= render 'account/shared/menu' %>
             </div>
           </nav>
         <% end %>
@@ -134,5 +134,6 @@
         </div>
       </div>
     </div>
+    <%= turbo_frame_tag "modal" %>
   </body>
 </html>
