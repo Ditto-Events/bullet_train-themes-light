@@ -1,6 +1,6 @@
 @layer components {
   a {
-    @apply text-blue hover:text-blue-dark hover:underline;
+    @apply text-pink-500 hover:text-pink-600 hover:underline;
   }
 
   b, strong {
@@ -12,15 +12,15 @@
   }
 
   .button {
-    @apply shadow-sm text-white hover:text-white bg-blue hover:bg-blue-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-dark hover:no-underline;
+    @apply shadow-sm text-white hover:text-white bg-pink-500 hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-pink-600 hover:no-underline;
   }
 
   .button-secondary {
-    @apply text-blue hover:text-blue-dark hover:underline;
+    @apply text-pink-500 hover:text-pink-600 hover:underline;
   }
 
   .button, .button-secondary, .button-alternative {
-    @apply py-2 px-4 border border-transparent rounded-md;
+    @apply py-2 px-4 border border-transparent rounded-full;
     @apply inline-flex items-center whitespace-nowrap;
     &.button-smaller {
       @apply py-1 px-3 text-xs;
@@ -76,6 +76,10 @@
     .buttons {
       @apply pt-1 space-x;
     }
+
+    & label {
+      @apply text-2xs font-semibold font-normal;
+    }
   }
 
   .table {
@@ -98,7 +102,7 @@
     }
 
     & td {
-      @apply px-3 py-3.5;
+      @apply px-3 py-2;
 
       &:first-child {
         @apply pl-5;
