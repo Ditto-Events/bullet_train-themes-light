@@ -121,6 +121,14 @@
           @apply -mt-5 -mb-5;
         }
       }
+
+      &.grayed-out {
+           @apply text-gray-400;
+
+        a {
+          @apply text-gray-400;
+        }
+      }
     }
   }
 
