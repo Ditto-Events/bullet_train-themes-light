@@ -66,8 +66,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        // "Avenir Next W01", "Proxima Nova W01", "", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        display: ['proxima-soft', ...defaultTheme.fontFamily.sans],
+        sans: ['proxima-nova', ...defaultTheme.fontFamily.sans],
       },
     },
   },
