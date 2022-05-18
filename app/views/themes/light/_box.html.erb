@@ -3,6 +3,7 @@
 <% divider ||= nil %>
 <% no_background ||= false %>
 <% title_size ||= "text-xl" %>
+<% format_title = (format_title.nil?) ? true : format_title %>
 <% body = p.content_for(:body) || p.content_for(:raw_body) %>
 <% pagy ||= nil %>
 <% full_height ||= false %>
@@ -10,9 +11,13 @@
 <div class="<%= "bg-white rounded-md shadow dark:bg-sealBlue-400" unless no_background %> overflow-hidden <%= 'h-full' if full_height %>">
   <div class="pt-6 <%= divider ? 'pb-6' : 'pb-0' %> px-8 space-y-2 <%= 'border-b shadow-sm dark:border-sealBlue-500' if divider %>">
     <% if p.content_for? :title %>
-      <h2 class="<%= title_size %> font-semibold dark:text-white">
+      <% if format_title %>
+        <h2 class="<%= title_size %> font-semibold dark:text-white">
+          <%= p.content_for :title %>
+        </h2>
+      <% else %>
         <%= p.content_for :title %>
-      </h2>
+      <% end %>
     <% end %>
 
     <% if p.content_for? :description %>
